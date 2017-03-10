@@ -105,43 +105,46 @@
      <td align="right" valign="top">Ваш телефон</td>
      <td><input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=phone></td>
     </tr>
-    <tr> 
-     <td></td>
+	<tr>
+     <td align="right" valign="dop">Адрес места жительства</td>
+	 <td><input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=address></td>
+	</tr>
      <td><input type=button onclick="alert('Ваша информация не отправлена на сервер, потому что сервера нет!')" value="Отправить" name=send></td>
-    </tr>
    </table>
   </form>
 
-
-
+  
 <script language="JavaScript"> 
 var f=document.mainForm; 
 function changeButtonStatus(){ 
-f.send.disabled=(f.name.value && f.surname.value && f.phone.value) ? false : true; 
+f.send.disabled=(f.name.value && f.surname.value && f.phone.value && f.address.value) ? false : true; 
 } 
 changeButtonStatus(); 
 </script>
+
 	<h4>Код примера:</h4>
 	<pre><code class="no-buttons">
-<table border="4" bgcolor="gray">
+<table border="4" bgcolor="dda0dd">
 <tr>
 <td><b>
 &lt;form name=mainForm&gt;
    &lt;table width="100%" cellspacing="0" cellpadding="4"&gt;
     &lt;tr&gt; 
-     &lt;td align="right" width="100"&gt;Ваше имя&lt;/td&gt;
-     &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=name&gt;&lt;/td&gt;
+	&lt;td align="right" width="100"&gt;Ваше имя&lt;/td&gt;
+	 &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=name&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt; 
-     &lt;td align="right" width="110"&gt;Ваша фамилия&lt;/td&gt;
-     &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=surname&gt;&lt;/td&gt;
+	&lt;td align="right" width="110"&gt;Ваша фамилия&lt;/td&gt;
+	 &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=surname&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt; 
-     &lt;td align="right" valign="top"&gt;Ваш телефон&lt;/td&gt;
-     &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=phone&gt;&lt;/td&gt;
+	&lt;td align="right" valign="top"&gt;Ваш телефон&lt;/td&gt;
+	 &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=phone&gt;&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr&gt; 
-     &lt;td&gt;&lt;/td&gt;
+    &lt;tr&gt;
+	&lt;td align="right" valign="dop"&gt;Адрес места жительства&lt;/td&gt;
+	 &lt;td&gt;&lt;input type="text" onkeyup=changeButtonStatus() onchange=changeButtonStatus() name=address&gt;&lt;/td&gt;
+	&lt;/tr&gt;
      &lt;td&gt;&lt;input type=button onclick="alert('Ваша информация не отправлена на сервер, потому что сервера нет!')" value="Отправить" name=send&gt;&lt;/td&gt;
     &lt;/tr&gt;
    &lt;/table&gt;
